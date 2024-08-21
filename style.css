@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    --black: #303030;
+    --grey: #909090;
+    --off-white: #EDEEE9;
+    --code: #D8DBCE;
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    --sans-serif: 'Inter', sans-serif;
+    background-color: var(--off-white);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+
+}
+body h1{
+    font-size: 50px;
+    font-weight: bolder;
+    line-height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 1rem;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--code);
+    width: 100%;
+    max-width: 780px;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.containerContent{
+    max-width: 50%;
+    width: 100%;
+    padding: 20px;
+}
+
+.formGroup{
+    position: relative;
+    margin: 16px 0;
+}
+
+.formGroup input{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 2px;
+    border: 1px solid var(--black);
+    height: 2.5rem;
+    transition: 0.15s all ease;
+}
+
+.formGroup input:focus{
+    outline: none;
+    border-top-color: rgba(0,0,0,0.1);
+}
+
+.formGroup input::placeholder{
+    display: none;
+    color: transparent;
+}
+
+.formGroup .formLabel{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    font-size: 20px;
+    padding: 0 10px;
+    color: var(--grey);
+    pointer-events: none;
+    transition: 0.15s all ease;
+}
+
+.formGroup input:focus + .formLabel,
+.formGroup input:not(:placeholder-shown) +
+.formLabel{
+    transform:  translate(5px, -22px);
+    color: var(--black);
+    font-size: 16px;
+    border-top-color: rgba(0, 0, 0, 0.5);
+}
+
+input[type = 'submit']{
+    margin: 1rem;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--code);
+}
+
+.formGroup .error{
+    color: #ff3860;
+    font-size: 13px;
+    height: 13px;
+}
+
+.formGroup.error input {
+    border-color: #ff3860;
+}
+
+
+.formGroup.success input {
+    border-color: #09c372;
+}
+
+
+
+
+
+
+@media screen and (max-width:768px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    .containerContent, .containerForm{
+        max-width: 100%;
+    }
+}

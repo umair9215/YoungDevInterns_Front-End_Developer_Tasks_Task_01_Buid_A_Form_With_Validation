@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 01:- Create A Form with Validation</title>
+    <link rel="stylesheet" href="./style.css" />
+    
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <h1>
+      Task 01:- <br />
+      Build a Form with Validation
+    </h1>
+    <div class="container">
+      <div class="containerContent">
+        <h2>Form With Validation</h2>
+        <p>
+          Creating a form with validation using JavaScript is essential for
+          ensuring the accuracy and integrity of the data submitted by users. By
+          implementing client-side validation, we can provide instant feedback
+          to users, enhancing their experience and reducing the likelihood of
+          errors. JavaScript enables the validation of various input types, such
+          as text fields, email addresses, passwords, and more, by checking for
+          specific criteria like required fields, format accuracy, and value
+          ranges. Effective use of JavaScript for form validation not only helps
+          in maintaining data quality but also reduces the need for server-side
+          validation, thereby improving the overall performance of the
+          application.
+        </p>
+      </div>
+
+      <div class="containerForm">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+
+            <input type="hidden" name="access_key" value="8b887a0c-ca8d-45ef-abab-b2188f53e19d">
+
+          <div class="formGroup">
+            <input
+              type="text"
+              name="Name"
+              id="name"
+              placeholder="Enter Your Name"
+            />
+            <label for="name" class="formLabel">Full Name</label>
+            <div class="error"></div>
+          </div>
+          
+          <div class="formGroup">
+              <input
+              type="email"
+              name="Email"
+              id="email"
+              placeholder="Enter Your Email"
+              />
+              <label for="email" class="formLabel">Email</label>
+              <div class="error"></div>
+            </div>
+
+            <div class="formGroup">
+                <input
+                  type="password"
+                  name="Password"
+                  id="password"
+                  placeholder="Enter Your Password"
+                />
+                <label for="password" class="formLabel">Password</label>
+                <div class="error"></div>
+            </div>
+
+            <input type="submit" value="Submit" name="Submit" />
+        </form>
+      </div>
+    </div>
+
+
+  </body>
+</html>
